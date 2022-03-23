@@ -1,0 +1,40 @@
+{
+  "name": "@splinetool/r3f-spline",
+  "packageManager": "yarn@3.2.0",
+  "type": "module",
+  "types": "./dist/useSpline.d.ts",
+  "main": "./dist/useSpline.cjs.js",
+  "module": "./dist/useSpline.es.js",
+  "react-native": "./dist/useSpline.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/useSpline.es.js",
+      "require": "./dist/useSpline.cjs.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@react-three/fiber": ">=7.0.0",
+    "@splinetool/loader": ">=0.9.19"
+  },
+  "devDependencies": {
+    "@react-three/fiber": "^7.0.26",
+    "@splinetool/loader": "^0.9.19",
+    "@types/react": "^17.0.42",
+    "@types/react-dom": "^17.0.14",
+    "@types/three": "^0.138.0",
+    "@vitejs/plugin-react": "^1.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "three": "^0.138.3",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6"
+  }
+}

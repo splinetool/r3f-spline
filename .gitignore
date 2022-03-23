@@ -1,0 +1,15 @@
+*.log
+node_modules
+dist
+dist-ssr
+*.local
+
+
+# yarn stuff
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
