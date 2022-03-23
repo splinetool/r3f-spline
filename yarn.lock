@@ -414,11 +414,11 @@ __metadata:
   linkType: hard
 
 "@splinetool/loader@npm:^0.9.19":
-  version: 0.9.19
-  resolution: "@splinetool/loader@npm:0.9.19"
+  version: 0.9.20
+  resolution: "@splinetool/loader@npm:0.9.20"
   peerDependencies:
     three: ">=0.133.0"
-  checksum: e3c3ebd295052169dcf8c3f6aa5a8e18e13352b453f7a28440949dd6829770f8072a587942f86bb8916a7a9ae4adffe1ddcd8f0ee3050a4dd830f3ee129f917f
+  checksum: 244eaa7b3a7b38ca3591260ebc41be8066ec396368a14745767666966e09261a2d7a45b3f8fec9e50b35f4a8c997a76efd7f5ff29fadfcf1d88286943b0ed8ef
   languageName: node
   linkType: hard
 
@@ -430,6 +430,7 @@ __metadata:
     "@splinetool/loader": ^0.9.19
     "@types/react": ^17.0.42
     "@types/react-dom": ^17.0.14
+    "@types/react-reconciler": ^0.26.4
     "@types/three": ^0.138.0
     "@vitejs/plugin-react": ^1.2.0
     react: ^17.0.2
@@ -463,6 +464,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: b54cd0ef573236b3d87fe7493e6d1c36d8b4ca37a3b46364272a5c91ac178e3296b68ea1aeb299ce68f12ad663c5720ee890d0539b14881c6754bdcbdb0befa0
+  languageName: node
+  linkType: hard
+
+"@types/react-reconciler@npm:^0.26.4":
+  version: 0.26.4
+  resolution: "@types/react-reconciler@npm:0.26.4"
+  dependencies:
+    "@types/react": "*"
+  checksum: 5ebb72f8aa70824b69030ae7f4c21828c0fb5c1cc5873a606eb7f7ac50cf5dd52502edcd32bf1eead2f149d076ee1798c86f1ffaebfa8b31d523343368d351e0
   languageName: node
   linkType: hard
 
