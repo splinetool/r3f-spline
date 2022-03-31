@@ -39,6 +39,12 @@ function Scene(props) {
           // decay={2}
           position={[18.54, 196.55, 491.49]}
           rotation={[-0.38, 0.04, -0.09]}
+          // TODO added these
+          shadow-camera-far={5000}
+          shadow-camera-left={-1000}
+          shadow-camera-right={1000}
+          shadow-camera-top={1000}
+          shadow-camera-bottom={-1000}
         />
         <OrthographicCamera
           makeDefault
@@ -57,6 +63,7 @@ function Scene(props) {
           material={materials['Pink']}
         />
         <mesh
+          // TODO check that castShadow/receiveShadow are based on the settings
           castShadow
           receiveShadow
           geometry={nodes['Rectangle 6'].geometry}
