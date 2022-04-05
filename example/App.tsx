@@ -2,7 +2,6 @@ import { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import useSpline from '../src/useSpline'
 import { OrbitControls, OrthographicCamera, Sky, useHelper } from '@react-three/drei'
-import { DirectionalLightHelper } from 'three'
 
 export default function App() {
   return (
@@ -16,15 +15,8 @@ export default function App() {
 }
 
 function Scene(props) {
-  const result = useSpline('https://prod.spline.design/JOgoI55ADZgorWoy/scene.spline')
-
-  console.log(result)
-
-  const { nodes, materials } = result
-
-  const light = useRef()
-
-  useHelper(light, DirectionalLightHelper)
+  const { nodes, materials } = useSpline('https://prod.spline.design/JOgoI55ADZgorWoy/scene.spline')
+  console.log({ nodes, materials })
 
   return (
     <>
@@ -32,11 +24,8 @@ function Scene(props) {
       <color attach="background" args={['#FFE8DC']} />
       <group {...props} dispose={null}>
         <directionalLight
-          ref={light}
-          castShadow // TODO added castShadow
+          castShadow
           intensity={0.6}
-          // TODO removed decay
-          // decay={2}
           position={[18.54, 196.55, 491.49]}
           rotation={[-0.38, 0.04, -0.09]}
           // TODO added these
@@ -58,9 +47,7 @@ function Scene(props) {
           castShadow
           receiveShadow
           geometry={nodes.Torus.geometry}
-          // TODO transmission is broken
-          // material={nodes.Torus.material}
-          material={materials['Pink']}
+          material={nodes.Torus.material}
         />
         <mesh
           // TODO check that castShadow/receiveShadow are based on the settings
