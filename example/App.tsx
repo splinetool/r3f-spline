@@ -1,7 +1,7 @@
 import { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import useSpline from '../src/useSpline'
-import { OrbitControls, OrthographicCamera, Sky, useHelper } from '@react-three/drei'
+import { OrbitControls, OrthographicCamera } from '@react-three/drei'
 
 export default function App() {
   return (
