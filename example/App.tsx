@@ -5,7 +5,7 @@ import { OrbitControls, OrthographicCamera, Sky, useHelper } from '@react-three/
 
 export default function App() {
   return (
-    <Canvas shadows dpr={[1, 2]} flat>
+    <Canvas shadows dpr={[1, 2]} flat linear>
       <Suspense fallback={null}>
         <OrbitControls />
         <Scene />
@@ -20,7 +20,6 @@ function Scene(props) {
 
   return (
     <>
-      {/* TODO added background */}
       <color attach="background" args={['#FFE8DC']} />
       <group {...props} dispose={null}>
         <directionalLight
@@ -28,7 +27,6 @@ function Scene(props) {
           intensity={0.6}
           position={[18.54, 196.55, 491.49]}
           rotation={[-0.38, 0.04, -0.09]}
-          // TODO added these
           shadow-camera-far={5000}
           shadow-camera-left={-1000}
           shadow-camera-right={1000}
@@ -42,7 +40,6 @@ function Scene(props) {
           position={[421.6, -431.22, 801.18]}
           rotation={[0.45, 0.44, -0.2]}
         />
-        {/* TODO removed personal camera */}
         <mesh
           castShadow
           receiveShadow
@@ -50,7 +47,6 @@ function Scene(props) {
           material={nodes.Torus.material}
         />
         <mesh
-          // TODO check that castShadow/receiveShadow are based on the settings
           castShadow
           receiveShadow
           geometry={nodes['Rectangle 6'].geometry}
