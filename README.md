@@ -43,3 +43,8 @@ export default function Scene({ ...props }) {
 ```
 
 ## Examples
+
+<p align="left">
+  <a href="https://codesandbox.io/s/2giomw" target="_blank"><img width="274" src=".github/screenshots/relax.png" /></a>
+  <a href="https://codesandbox.io/s/lol3p7" target="_blank"><img width="274" src=".github/screenshots/work.png" /></a>
+</p>
