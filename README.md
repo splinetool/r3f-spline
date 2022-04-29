@@ -29,14 +29,17 @@ npm install @splinetool/r3f-spline @splinetool/loader
 
 ```jsx
 import useSpline from '@splinetool/r3f-spline'
-import { OrthographicCamera } from '@react-three/drei'
 
 export default function Scene({ ...props }) {
   const { nodes, materials } = useSpline('https://prod.spline.design/2fzdsSVagfszNxsd/scene.spline')
 
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Rectangle.geometry} material={materials['Rectangle Material']} />
+      <mesh
+        name="Rectangle"
+        geometry={nodes.Rectangle.geometry}
+        material={materials['Rectangle Material']}
+      />
     </group>
   )
 }
@@ -45,6 +48,6 @@ export default function Scene({ ...props }) {
 ## Examples
 
 <p align="left">
-  <a href="https://codesandbox.io/s/2giomw" target="_blank"><img width="274" src=".github/screenshots/relax.png" /></a>
-  <a href="https://codesandbox.io/s/lol3p7" target="_blank"><img width="274" src=".github/screenshots/work.png" /></a>
+  <a href="https://codesandbox.io/s/2giomw" target="_blank"><img width="274" src="https://raw.githubusercontent.com/splinetool/r3f-spline/main/.github/screenshots/relax.png" /></a>
+  <a href="https://codesandbox.io/s/lol3p7" target="_blank"><img width="274" src="https://raw.githubusercontent.com/splinetool/r3f-spline/main/.github/screenshots/work.png" /></a>
 </p>

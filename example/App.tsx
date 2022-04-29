@@ -5,7 +5,7 @@ import { OrbitControls, OrthographicCamera } from '@react-three/drei'
 
 export default function App() {
   return (
-    <Canvas shadows dpr={[1, 2]} flat linear>
+    <Canvas shadows flat linear>
       <Suspense fallback={null}>
         <OrbitControls />
         <Scene />
