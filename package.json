@@ -9,6 +9,7 @@
   "react-native": "./dist/useSpline.es.js",
   "exports": {
     ".": {
+      "types": "./dist/useSpline.d.ts",
       "import": "./dist/useSpline.es.js",
       "require": "./dist/useSpline.cjs.js"
     }
