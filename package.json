@@ -22,7 +22,8 @@
     "dev": "vite",
     "build": "vite build && yarn build-types",
     "build-types": "tsc --skipLibCheck --isolatedModules false --noEmit false --emitDeclarationOnly --declaration --outDir dist/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "yarn build && np"
   },
   "peerDependencies": {
     "@react-three/fiber": ">=7.0.0",
@@ -36,6 +37,7 @@
     "@types/react-dom": "^18.0.0",
     "@types/three": "^0.138.0",
     "@vitejs/plugin-react": "^1.3.1",
+    "np": "^7.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "three": "0.138.3",
